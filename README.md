@@ -19,6 +19,86 @@ for filename in uploaded.keys():
     file_path = filename
 ```
 Transcribe using whisper to any language needed
+# Run this cell and wait for all chunks to be transcribed. The final output will be shown after all chunks are done. 
+
+## Whisper Large v2 Supported Languages and Codes
+
+Below is the full list of languages supported by Whisper Large v2 with their corresponding code parameters:
+
+| Language              | Code  | Language            | Code  |
+|-----------------------|-------|---------------------|-------|
+| Afrikaans             | `af`  | Albanian            | `sq`  |
+| Amharic               | `am`  | Arabic              | `ar`  |
+| Armenian              | `hy`  | Assamese            | `as`  |
+| Azerbaijani           | `az`  | Bashkir             | `ba`  |
+| Basque                | `eu`  | Belarusian          | `be`  |
+| Bengali               | `bn`  | Bosnian             | `bs`  |
+| Bulgarian             | `bg`  | Burmese             | `my`  |
+| Catalan               | `ca`  | Chinese (Simplified)| `zh`  |
+| Chinese (Traditional) | `zh-tw`| Croatian           | `hr`  |
+| Czech                 | `cs`  | Danish              | `da`  |
+| Dutch                 | `nl`  | English             | `en`  |
+| Esperanto             | `eo`  | Estonian            | `et`  |
+| Finnish               | `fi`  | French              | `fr`  |
+| Galician              | `gl`  | Georgian            | `ka`  |
+| German                | `de`  | Greek               | `el`  |
+| Gujarati              | `gu`  | Hausa               | `ha`  |
+| Hebrew                | `he`  | Hindi               | `hi`  |
+| Hungarian             | `hu`  | Icelandic           | `is`  |
+| Indonesian            | `id`  | Italian             | `it`  |
+| Japanese              | `ja`  | Javanese            | `jv`  |
+| Kannada               | `kn`  | Kazakh              | `kk`  |
+| Khmer                 | `km`  | Korean              | `ko`  |
+| Lao                   | `lo`  | Latvian             | `lv`  |
+| Lithuanian            | `lt`  | Macedonian          | `mk`  |
+| Malagasy              | `mg`  | Malay               | `ms`  |
+| Malayalam             | `ml`  | Maltese             | `mt`  |
+| Maori                 | `mi`  | Marathi             | `mr`  |
+| Mongolian             | `mn`  | Nepali              | `ne`  |
+| Norwegian             | `no`  | Oriya (Odia)        | `or`  |
+| Pashto                | `ps`  | Persian (Farsi)     | `fa`  |
+| Polish                | `pl`  | Portuguese          | `pt`  |
+| Punjabi               | `pa`  | Romanian            | `ro`  |
+| Russian               | `ru`  | Serbian             | `sr`  |
+| Sinhala               | `si`  | Slovak              | `sk`  |
+| Slovenian             | `sl`  | Somali              | `so`  |
+| Spanish               | `es`  | Sundanese           | `su`  |
+| Swahili               | `sw`  | Swedish             | `sv`  |
+| Tagalog               | `tl`  | Tamil               | `ta`  |
+| Tatar                 | `tt`  | Telugu              | `te`  |
+| Thai                  | `th`  | Turkish             | `tr`  |
+| Ukrainian             | `uk`  | Urdu                | `ur`  |
+| Uzbek                 | `uz`  | Vietnamese          | `vi`  |
+| Welsh                 | `cy`  | Yiddish             | `yi`  |
+| Yoruba                | `yo`  | Zulu                | `zu`  |
+
+You can use the corresponding code for each language in your Whisper configuration to set the desired transcription language.
+
+Here’s how you can modify the code to replace the language in a specific line using GitHub Markdown:
+
+```markdown
+# How to Modify the Language in Code
+
+Below is the Python code snippet to change the language in `forced_decoder_ids`:
+
+```python
+# Example: Setting the decoder prompt for a specific language and task
+forced_decoder_ids = processor.get_decoder_prompt_ids(language="ta", task="translate")
+```
+
+### Instructions to Change the Language:
+1. Locate the line in your code:
+   ```python
+   forced_decoder_ids = processor.get_decoder_prompt_ids(language="ta", task="translate")
+   ```
+2. Replace the `"ta"` (Tamil) in the `language` parameter with the desired language code. For example, to set the language to Spanish (`es`):
+   ```python
+   forced_decoder_ids = processor.get_decoder_prompt_ids(language="es", task="translate")
+   ```
+
+
+3. Run the cell to use the updated language.
+
 ```python
 import torch
 from transformers import WhisperProcessor, WhisperForConditionalGeneration
