@@ -1,5 +1,5 @@
 # Transcribe
-Transcribe using Whisper
+## Transcribe audio in any language to English using Whisper
 
 ### Python Code Example
 ```python
