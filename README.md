@@ -1,6 +1,13 @@
 # Transcribe
 ## Transcribe audio in any language to English using Whisper
 
+# Run on Google Colab
+
+Click the badge below to open this project in Google Colab:
+
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/your-notebook-link-here](https://colab.research.google.com/drive/1HdNUo4pOo-vXQL3Lxg38l6R9uNuMT1F1?usp=sharing))
+
+
 ### Python Code Example
 ```python
 pip install transformers torchaudio
